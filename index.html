@@ -229,6 +229,207 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/12/05-12-笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="折纸">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="菜鸡的修炼之旅">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/05/12/05-12-笔记/" itemprop="url">05/12 笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-12T15:19:29+08:00">
+                2019-05-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>[TOC]</p>
+<h1 id="05-12-笔记"><a href="#05-12-笔记" class="headerlink" title="05/12 笔记"></a>05/12 笔记</h1><h2 id="05-12-JavaScript笔记"><a href="#05-12-JavaScript笔记" class="headerlink" title="05/12 JavaScript笔记"></a>05/12 JavaScript笔记</h2><h3 id="错题总结-amp-amp-虽对但蒙"><a href="#错题总结-amp-amp-虽对但蒙" class="headerlink" title="错题总结&amp;&amp;虽对但蒙"></a>错题总结&amp;&amp;虽对但蒙</h3><ol>
+<li><blockquote>
+<p>外部脚本必须包含&lt;script&#62;标签吗？</p>
+</blockquote>
+</li>
+</ol>
+<p><strong>错误</strong>—题意理解不清</p>
+<p>我原本认为使用外部脚本 必须是&lt;script src=”xxx.js”&#62;的形式。但实际上，<strong>在外部脚本中只能包含脚本语言代码</strong>，而不能包含其他代码（比如HTML代码）</p>
+<blockquote>
+<p>引用时的4个注意事项：　　　</p>
+<ol>
+<li><p>外部脚本文件可以是任意扩展名，浏览器会根据&lt;script&#62;标签中的type属性值和language属性值，判断使用哪种解析器来解析外部脚本文件。通常开发者会将JavaScript外部脚本的扩展名设为.js。</p>
+</li>
+<li><p>在外部脚本文件中，只能包含脚本语言代码，不能包含其他代码（如HTML代码等），也不能包含&lt;script&#62;标签（script元素属于HTML语言中的元素）。</p>
+</li>
+<li>在引用外部脚本文件时，&lt;script&#62;标签与&lt;/script&#62;标签之间不能有其他代码，包括脚本语言代码。</li>
+<li>虽然在引用外部脚本文件时，&lt;script&#62;标签与&lt;/script&#62;标签之间不能有其他代码，但&lt;/script&#62;标签也不能被省略。</li>
+</ol>
+</blockquote>
+<ol start="2">
+<li><blockquote>
+<p>如何在警告框中写入 “Hello World”？</p>
+</blockquote>
+</li>
+</ol>
+<p>alert(“Hello World”)</p>
+<ol start="3">
+<li><blockquote>
+<p>如何把 7.25 四舍五入为最接近的整数？</p>
+</blockquote>
+</li>
+</ol>
+<p>Math.rnd(7.25)</p>
+<ol start="4">
+<li><blockquote>
+<p>如何在浏览器的状态栏放入一条消息？</p>
+</blockquote>
+</li>
+</ol>
+<p>window.status <strong>=</strong> “测试”</p>
+<ol start="5">
+<li><blockquote>
+<p>如何获得客户端浏览器的名称？</p>
+</blockquote>
+</li>
+</ol>
+<p>navigator.appName</p>
+<h3 id="新芝士！–JavaScript定义数组的几种方法"><a href="#新芝士！–JavaScript定义数组的几种方法" class="headerlink" title="新芝士！–JavaScript定义数组的几种方法"></a>新芝士！–JavaScript定义数组的几种方法</h3><h4 id="JavaScript中的数组特点"><a href="#JavaScript中的数组特点" class="headerlink" title="JavaScript中的数组特点"></a>JavaScript中的数组特点</h4><ol>
+<li>定义时无需指定数据类型</li>
+<li>定义时无需指定数组长度</li>
+<li>数组内元素类型可以不一致</li>
+</ol>
+<h4 id="创建数组的几种方法"><a href="#创建数组的几种方法" class="headerlink" title="创建数组的几种方法"></a>创建数组的几种方法</h4><ol>
+<li>var arr = [key1,key2,key3];</li>
+<li>var arr = new Array(key1,key2,key3);</li>
+<li>var arr = new Array(size);</li>
+<li>var arr = new Array(); //先定义再赋值</li>
+</ol>
+<h4 id="Else"><a href="#Else" class="headerlink" title="Else"></a>Else</h4><ol>
+<li><p>数组长度 arr.length();</p>
+</li>
+<li><p>遍历方法</p>
+</li>
+</ol>
+<p><code>var arr = [1,2,3,4,5];</code></p>
+<p>​    <code>for (var item in arr){</code><br>​    ​    ​    ​        <code>document.write(item + &#39;&lt;br&#39;&gt;);</code><br>​<code>}</code></p>
+<ol start="3">
+<li><p>json格式的定义：<br><code>var arr = [</code></p>
+<p><code>{&quot;id&quot;:&quot;0001&quot;,&quot;name&quot;:&quot;tom&quot;,&quot;age&quot;:15},{&quot;id&quot;:&quot;0002&quot;,&quot;name&quot;:&quot;arika&quot;,&quot;age&quot;:16}];</code></p>
+</li>
+</ol>
+<h3 id="05-12总结"><a href="#05-12总结" class="headerlink" title="05/12总结"></a>05/12总结</h3><ol>
+<li><p>补充JavaScript笔记</p>
+</li>
+<li><p><a href="http://www.w3school.com.cn/htmldom/index.asp" target="_blank" rel="noopener">完成HTML DOM学习</a></p>
+</li>
+<li><p>尝试了一些JS实例</p>
+</li>
+<li><p>JavaScript还有很多需要深入学习的地方，最近所学只不过是浅尝辄止，加油。</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/09/tips-or-tricks-补档/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -789,7 +990,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -797,6 +998,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
             
 
           </nav>
